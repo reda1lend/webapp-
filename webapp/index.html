@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Radar — фриланс-сигналы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="scanner">
+      <div class="scanner__line"></div>
+      <div class="scanner__row">
+        <div class="live-dot"><span></span>LIVE</div>
+        <div class="scanner__meta">
+          скан: <span id="lastScan" class="mono">только что</span>
+        </div>
+      </div>
+      <h1 class="scanner__title">Radar</h1>
+      <p class="scanner__sub">Новые проекты, пока конкуренты ещё спят</p>
+    </header>
+
+    <div class="chips" id="chips">
+      <button class="chip chip--active" data-filter="all">Все</button>
+      <button class="chip" data-filter="python">python</button>
+      <button class="chip" data-filter="react">react</button>
+      <button class="chip" data-filter="flutter">flutter</button>
+      <button class="chip" data-filter="telegram">telegram</button>
+      <button class="chip" data-filter="design">design</button>
+    </div>
+
+    <main class="feed" id="feed"></main>
+
+    <div class="paywall" id="paywall">
+      <div class="paywall__pulse"></div>
+      <div class="paywall__text">
+        <strong>Ещё 12 проектов ждут</strong>
+        <span>Pro открывает все биржи и мгновенные алерты</span>
+      </div>
+      <button class="paywall__cta" id="upgradeBtn">Разблокировать · от 100 ⭐</button>
+    </div>
+
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
